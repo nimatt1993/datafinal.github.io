@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.23">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Alireza Toutounchi (Matriculation:400889526)">
+<meta name="keywords" content="Data, Errors, Consequences, Mismanagement, Analysis">
+<meta name="description" content="SMALL ERRORS, BIG CONSEQUENCES">
+
+<title>Small Errors, Big Consequences: Lessons from Data Mismanagement in Business</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="small errors big consequences final_files/libs/clipboard/clipboard.min.js"></script>
+<script src="small errors big consequences final_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="small errors big consequences final_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="small errors big consequences final_files/libs/quarto-html/popper.min.js"></script>
+<script src="small errors big consequences final_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="small errors big consequences final_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="small errors big consequences final_files/libs/quarto-html/quarto-syntax-highlighting-226bd0f977fa82dfae4534cac220d79a.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="small errors big consequences final_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="small errors big consequences final_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="small errors big consequences final_files/libs/bootstrap/bootstrap-19b6a0d198fed111047a26c2a7f710cb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+<link rel="stylesheet" href="_extensions/apaquarto/apa.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
+<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link active" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#affidavit" id="toc-affidavit" class="nav-link" data-scroll-target="#affidavit">Affidavit</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="small errors big consequences final.pdf"><i class="bi bi-file-pdf"></i>Typst (apaquarto)</a></li><li><a href="small-errors-big-consequences-final.pdf"><i class="bi bi-file-pdf"></i>PDF (apaquarto)</a></li></ul></div></nav>
+</div>
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+</div>
+<main class="content" id="quarto-document-content">
+
+
+
+
+<br>
+
+<br>
+
+<section id="title" class="level1 title unnumbered unlisted">
+<h1 class="title unnumbered unlisted">Small Errors, Big Consequences: Lessons from Data Mismanagement in Business</h1>
+<div class="Author">
+<br>
+
+<p>Alireza Toutounchi (Matriculation:400889526)</p>
+<p>International Management, M.A., Hochschule Fresenius - University of Applied Science</p>
+</div>
+<br>
+
+<br>
+
+</section>
+<section id="author-note" class="level1 unnumbered unlisted AuthorNote">
+<h1 class="unnumbered unlisted AuthorNote">Author Note</h1>
+<p>The authors have no conflicts of interest to disclose.</p>
+<p>Correspondence concerning this article should be addressed to Alireza Toutounchi (Matriculation:400889526), International Management, M.A., Hochschule Fresenius - University of Applied Science, Koln, Email: <a href="mailto:toutounchi.alireza@stud.hs-fresenius.de">toutounchi.alireza@stud.hs-fresenius.de</a></p>
+<br>
+</section>
+<section id="abstract" class="level1 unnumbered unlisted AuthorNote">
+<h1 class="unnumbered unlisted AuthorNote">Abstract</h1>
+<div class="AbstractFirstParagraph">
+<p>In the era of data-driven decision-making, even minor errors in data management can lead to major financial, operational, and reputational consequences for businesses. This paper explores real-world cases where inaccurate, incomplete, or poorly governed data resulted in substantial setbacks for global organizations. Through an analysis of incidents at companies such as Equifax, Unity Technologies, Samsung, and Knight Capital, we highlight how flawed data inputs, system failures, and human errors have led to multimillion-dollar losses, regulatory penalties, and public mistrust. The study also presents a simulation comparing true and faulty forecasts in business reporting to illustrate how data errors can distort insights and decisions. Finally, key lessons are drawn, emphasizing the critical importance of robust data governance, validation systems, and proactive error detection in maintaining business integrity and resilience.</p>
+</div>
+<p><em>Keywords</em>: Data, Errors, Consequences, Mismanagement, Analysis</p>
+<br>
+</section>
+<section id="firstheader" class="level1 title unnumbered unlisted">
+<h1 class="title unnumbered unlisted">Small Errors, Big Consequences: Lessons from Data Mismanagement in Business</h1>
+<p>The term “data” refers to raw facts, figures, or information collected for reference, analysis, or processing. Data can exist in many forms — numbers, text, images, audio, video, or symbols — and it has no meaning on its own until it is interpreted.</p>
+<p><strong>Types of Data:</strong></p>
+<ol type="1">
+<li>Quantitative Data (Numerical)</li>
+</ol>
+<p>● Discrete: Countable (e.g., number of students).</p>
+<p>● Continuous: Measurable (e.g., height, weight).</p>
+<ol start="2" type="1">
+<li>Qualitative Data (Categorical)</li>
+</ol>
+<p>●Nominal: Categories with no order (e.g., gender, color).</p>
+<p>●Ordinal: Categories with order (e.g., satisfaction level: low, medium, high).</p>
+<p><strong>Forms of Data:</strong> • Structured (organized in tables like Excel or databases) • Unstructured (like emails, social media, videos) • Semi-structured (like JSON or XML files)</p>
+<p><span class="citation" data-cites="provost2013data">(<a href="#ref-provost2013data" role="doc-biblioref">Provost &amp; Fawcett, 2013</a>)</span></p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: right;">ID</th>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Department</th>
+<th style="text-align: left;">Salary</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">102</td>
+<td style="text-align: left;">Jane</td>
+<td style="text-align: left;">HR</td>
+<td style="text-align: left;">€3,500</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>This becomes information when we interpret it — for example, understanding that Jane works in HR and earns €3,500. The most basic division of information is good and bad information. This distinction is crucial in fields like data science, business intelligence, decision-making, and information systems.</p>
+<section id="good-information" class="level2">
+<h2 data-anchor-id="good-information">Good Information</h2>
+<p>Good information is accurate, timely, relevant, complete, and reliable. It enhances decision-making and contributes to achieving goals.</p>
+<ol type="1">
+<li>Accuracy – Free from error.</li>
+<li>Timeliness – Up to date and delivered on time.</li>
+<li>Relevance – Applicable to the problem or decision at hand.</li>
+<li>Completeness – Covers all important facts.</li>
+<li>Reliability – Trustworthy and consistent.</li>
+</ol>
+<p>Example: A dashboard showing real-time sales performance across regions using verified data sources.</p>
+</section>
+<section id="bad-information" class="level2">
+<h2 data-anchor-id="bad-information">Bad Information</h2>
+<p>Bad information is inaccurate, outdated, irrelevant, incomplete, or misleading. It leads to poor decisions and potentially serious consequences. 1. Misinformation – False or misleading information shared without harmful intent. 2. Disinformation – Deliberately deceptive information shared with malicious intent. 3. Outdated data – Information that was once correct but no longer reflects the current state.</p>
+<p>Example: Using last year’s market trends to make decisions in a rapidly changing economy without checking current data.</p>
+<p><strong>The topic of discussion here is bad information, so I will address this issue and examine its implications and delve into it a little deeper.</strong></p>
+<p>Bad data can cost you money. It can also damage your reputation, drive good customers away, and negatively affect your entire workforce. Bad data, more often than not, results in bad decisions – and bad decisions can destroy a business. The true costs of bad data are so overwhelming that they are scary. If you do not take data quality seriously, you are at risk of being blindsided by the enormous impact of bad data.</p>
+<p><strong>What is Bad Data?</strong></p>
+<p>Bad data is any data that is not wholly accurate or doesn’t conform to necessary standards. That can include inaccurate data, incomplete data, conflicting data, duplicate data, invalid data, and unsynchronized data.</p>
+<p><span class="citation" data-cites="firsteigen_cost_bad_data">(<a href="#ref-firsteigen_cost_bad_data" role="doc-biblioref"><strong>firsteigen_cost_bad_data?</strong></a>)</span></p>
+<p><strong>Example of bad data</strong></p>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'dplyr'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:stats':
+
+    filter, lag</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead.</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="small-errors-big-consequences-final_files/figure-html/unnamed-chunk-2-1.svg" class="img-fluid figure-img" width="624"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>How bad data can impact your businesses ?</strong></p>
+<p>This is the most important question you should be concerned with to reach the correct answer in terms of proper management and preventing significant damage from the smallest errors. To answer this question, I would say that if the initial errors are recoverable with a small error margin and the project is flexible, it may be possible to prevent the issue with minimal cost and in the shortest possible time. However, if we analyze it on paper, if a project that is already in progress has not been properly analyzed beforehand and its roadmap hasn’t been prepared, even if the error is addressed quickly, the project will still face significant consequences.</p>
+<p><span class="citation" data-cites="firsteigen_cost_bad_data">(<a href="#ref-firsteigen_cost_bad_data" role="doc-biblioref"><strong>firsteigen_cost_bad_data?</strong></a>)</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<figcaption>Fig2.Table1</figcaption>
+<p><img src="002.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p><strong>How does your business use data?</strong></p>
+<p>It outlines two primary functions of business data use—Making decisions and Managing operations—and illustrates the negative consequences of poor data practices under each.</p>
+<p><strong>1. Making Decisions</strong></p>
+<p>Businesses rely heavily on data to guide strategic, operational, and financial decisions. When data is incomplete, outdated, or incorrect, it leads to:</p>
+<p><strong>• Poor decisions:</strong> Executives may act on flawed insights, leading to failed investments or ineffective campaigns.</p>
+<p><strong>• Missed opportunities:</strong> Without timely or accurate data, organizations may overlook market trends or emerging customer needs.</p>
+<p><strong>• Internal loss of trust:</strong> Employees lose confidence in systems or leadership when data repeatedly proves unreliable.</p>
+<p>Example:</p>
+<p>A retail company might misinterpret sales data due to duplicate entries, leading to overproduction of a poorly performing product.</p>
+<p><strong>2. Managing Operations</strong></p>
+<p>Data also plays a key role in the day-to-day functioning of a business—like inventory control, customer support, and supply chain management.</p>
+<p>When data is mismanaged, it results in:</p>
+<p><strong>• Wasted time &amp; money:</strong> Teams spend hours cleaning, verifying, or reconciling data.</p>
+<p><strong>• Frustrated customers:</strong> Inaccurate customer profiles or slow systems erode user experience.</p>
+<p><strong>• External loss of trust:</strong> Repeated failures caused by bad data can harm a brand’s reputation in the market.</p>
+<p>Example:</p>
+<p>An e-commerce platform using outdated shipping data may send packages to the wrong addresses, frustrating customers and increasing return costs.</p>
+<p><strong>Conclusion:</strong></p>
+<p>Businesses depend on data to inform both decision-making and daily operations. when this data is unreliable, the consequences ripple through every layer of the organization—from strategic planning to customer satisfaction. Mismanagement not only wastes resources but undermines trust both internally and externally. Companies must treat data as a critical asset, investing in quality controls, validation systems, and data governance to mitigate these risks.</p>
+<p><strong>What is Data Normalizing ?</strong></p>
+<p>Data normalization is the process of scaling numerical values so that they fall within a common range—often between 0 and 1 or so they have a mean of 0 and a standard deviation of 1.</p>
+<p><span class="citation" data-cites="smith2025impactdata">(<a href="#ref-smith2025impactdata" role="doc-biblioref"><strong>smith2025impactdata?</strong></a>)</span></p>
+<p><strong>When use ?</strong></p>
+<p>When we want to perform the process of scaling numerical values for numerical data (numeric variables), we can use data normalization. However, for some data that are not numerical, such as categorical data (gender and country), we simply need to encode the data, and binary data (0, 1) are usually already normalized. Textual and historical data must first be converted into numerical features.</p>
+<p>The following algorithms are commonly used for normalization:</p>
+<p>• K-means clustering</p>
+<p>• PCA</p>
+<p>• Logistic / Linear Regression</p>
+<p>• SVM</p>
+<p>• Neural Networks</p>
+<p>• Decision Tree / Random Forest</p>
+<p><span class="citation" data-cites="provost2013researchgate">(<a href="#ref-provost2013researchgate" role="doc-biblioref"><strong>provost2013researchgate?</strong></a>)</span></p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 5
+  Sales Employees Expenses Profit Customer_Satisfaction
+  &lt;int&gt;     &lt;int&gt;    &lt;int&gt;  &lt;int&gt;                 &lt;dbl&gt;
+1  3608         7     1815   1126                  9.4 
+2  3368        45     1335    473                  9.33
+3  2176        93     1481    869                  7.61
+4  2097        31     2693   1114                  4   
+5  2251        40     1871    797                  5.64
+6  4217        99     2744    749                  7.7 </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="small-errors-big-consequences-final_files/figure-html/unnamed-chunk-4-1.svg" class="img-fluid figure-img" width="624"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The table above includes:</p>
+<p><strong>1.Min-Max Normalization (0–1)</strong></p>
+<p><strong>2.Z-score Standardization (mean 0, sd 1)</strong></p>
+<p><span class="citation" data-cites="samsung2025q1">(<a href="#ref-samsung2025q1" role="doc-biblioref"><strong>samsung2025q1?</strong></a>)</span></p>
+<p><br></p>
+</section>
+<section id="what-is-data-mismanagement-in-business" class="level2">
+<h2 data-anchor-id="what-is-data-mismanagement-in-business">What is Data Mismanagement in Business?</h2>
+<p>Data mismanagement in business refers to the poor handling, organization, protection, or use of data, leading to negative outcomes for operations, strategy, customers, and compliance.</p>
+<p>It includes everything from:</p>
+<ol type="1">
+<li>storing outdated or duplicate records,</li>
+<li>using inaccurate data for decision-making,</li>
+<li>failing to secure sensitive information,</li>
+<li>to lacking proper data governance policies.</li>
+</ol>
+<p><strong>Key Aspects of Data Mismanagement:</strong></p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 73%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Area</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Poor data quality</td>
+<td style="text-align: left;">Inaccurate, incomplete, or outdated information.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Lack of data governance</td>
+<td style="text-align: left;">No policies for handling or validating data.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Siloed systems</td>
+<td style="text-align: left;">Data is scattered across departments with no central management.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Inadequate security</td>
+<td style="text-align: left;">Failure to protect data from breaches or leaks.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Untrained personnel</td>
+<td style="text-align: left;">Staff input or use data incorrectly due to lack of training.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="common-consequences" class="level2">
+<h2 data-anchor-id="common-consequences"><strong>Common Consequences:</strong></h2>
+<ol type="1">
+<li><p>Financial Losses: Wrong data can lead to flawed decisions and costly errors.</p></li>
+<li><p>Reputation Damage: Loss of customer trust due to data breaches or service failures.</p></li>
+<li><p>Regulatory Fines: Non-compliance with laws like GDPR or HIPAA due to poor data practices.</p></li>
+<li><p>Operational Inefficiencies: Wasted resources due to rework, duplication, or delays.</p></li>
+</ol>
+<p><strong>Data mismanagement happens when a business fails to treat data as a strategic asset—resulting in bad decisions, inefficiency, and a loss of trust.</strong></p>
+<p>Common Situations Where Data Mismanagement Happens:</p>
+<p><strong>1. Lack of Data Governance</strong></p>
+<p>• No clear policies on who owns, accesses, or updates data.</p>
+<p>• No rules for validation, version control, or lifecycle management. <strong>Example:</strong> Multiple departments maintain different versions of the same customer list, leading to inconsistencies.</p>
+<p><strong>2. Poor Data Quality Controls</strong></p>
+<p>• No validation rules during data entry.</p>
+<p>• Outdated, duplicated, or missing information is allowed to persist. <strong>Example:</strong> A typo in a financial spreadsheet leads to misreported revenue figures.</p>
+<p><strong>3. Over-Reliance on Manual Processes</strong></p>
+<p>• Using spreadsheets instead of databases.</p>
+<p>• Lack of automation for cleansing or integration.</p>
+<p><strong>Example:</strong> Public Health England missed over 15,000 COVID-19 cases in 2020 due to Excel row limits.</p>
+<p><strong>4. Siloed Systems and Departments</strong></p>
+<p>• Data is stored in separate tools or teams with little communication.</p>
+<p>• No unified view of customers, sales, or operations.</p>
+<p><strong>Example:</strong> Marketing and sales use different definitions for “qualified leads,” causing confusion and missed opportunities.</p>
+<p><strong>5. Inadequate Staff Training</strong></p>
+<p>• Employees don’t understand how to input or interpret data correctly.</p>
+<p>• Data mishandling occurs due to lack of education or awareness.</p>
+<p><strong>Example:</strong> Call center agents overwrite customer data because they don’t understand the CRM system.</p>
+<p><strong>6. Failure to Monitor and Audit</strong></p>
+<p>• Businesses don’t regularly check their data for integrity, security, or accuracy.</p>
+<p><strong>Result:</strong> Errors accumulate silently until they cause major harm.</p>
+<p><strong>Data mismanagement happens when businesses treat data casually instead of strategically—leading to chaos, loss, and missed opportunities.</strong></p>
+<p>All the consequences of small and large problems in the business field stem from the lack of access to raw and initial data, classified information, data from an incorrect statistical population, and even information from the wrong choice of company or project in the early stages.</p>
+<p>To prevent such occurrences, we must first obtain accurate and classified data from the correct statistical population. After that, it’s time to categorize and prioritize the information and classify it. Finally, accurate and precise data analysis comes into play.</p>
+<p>The final step is predicting the data and observing the initial results of the forecast. This allows you to start making predictions based on accurate and precise data and forecast the most accurate outcome, taking into account human error and the difficulty of project execution.</p>
+<p>This is an example of combining proper management with the use of data analysis, providing the best output as an initial sample to the client.</p>
+<p><strong>Key Lessons from Data Mismanagement in Business</strong></p>
+<p><strong>1. Financial Losses Due to Data Errors</strong></p>
+<p>Inaccurate data can lead to significant financial setbacks. For instance, Unity Technologies experienced a $110 million loss due to incorrect data used in their Audience Pinpoint tool, which affected ad targeting effectiveness.</p>
+<p><strong>2. Reputational Damage and Loss of Trust</strong></p>
+<p>Data breaches or mismanagement can erode customer trust. Equifax’s 2017 data breach exposed sensitive information of 147 million people, leading to a damaged reputation and legal consequences.</p>
+<p><strong>3. Operational Inefficiencies</strong></p>
+<p>Poor data quality can disrupt business operations. Uber faced a $45 million loss due to miscalculations in driver payments, stemming from data inaccuracies.</p>
+<p><strong>4. Regulatory Non-Compliance</strong></p>
+<p>Failure to manage data properly can result in non-compliance with regulations. The Capital Hill Cashgate Scandal in Malawi involved the mismanagement of government funds due to inadequate financial data systems, leading to significant political and financial repercussions.</p>
+<p><strong>5. Strategic Missteps</strong></p>
+<p>Decisions based on flawed data can misguide business strategies. Samsung reportedly lost <strong>$105 billion</strong> due to a data entry error that misrepresented financial forecasts, affecting investor confidence.</p>
+<p><span class="citation" data-cites="kitchin2014data">(<a href="#ref-kitchin2014data" role="doc-biblioref">Kitchin, 2014</a>)</span></p>
+<p>** This is a real-life example from Samsung based on data mismanagement in business:**</p>
+<p><strong>1. Samsung (2016) - Battery overheating on Galaxy Note 7 smartphones</strong></p>
+<p>Samsung faced a significant issue in 2016 with its Galaxy Note 7 smartphones, which were prone to battery overheating and catching fire. This crisis was largely due to poor data management and quality control in the production process. Initially, the company did not properly analyze the data related to battery safety, which led to design flaws in the device. After launching the product, Samsung failed to act quickly enough, relying on faulty data and assumptions about the safety of the phones, causing them to recall millions of units.</p>
+<p>This situation highlights how data mismanagement—whether it’s in the form of faulty testing, incorrect data interpretation, or slow reaction to early warning signs—can lead to major financial losses, reputation damage, and significant customer trust issues. Proper data analysis, accurate forecasting, and quick decision-making could have helped Samsung avoid such a crisis or at least mitigate its effects.</p>
+<p><span class="citation" data-cites="tradingeconomics_samsung_eps">(<a href="#ref-tradingeconomics_samsung_eps" role="doc-biblioref"><strong>tradingeconomics_samsung_eps?</strong></a>)</span></p>
+<p><strong>2.Samsung (2021) – Forecasting Entry Error</strong></p>
+<p>A human data entry error inflated Samsung’s financial forecasts, which misled investors and contributed to a reported $105 billion market value drop.</p>
+<p><span class="citation" data-cites="simplywallst_samsung_2024">(<a href="#ref-simplywallst_samsung_2024" role="doc-biblioref"><strong>simplywallst_samsung_2024?</strong></a>)</span></p>
+<p><strong>Even small manual data errors in critical reports can have billion-dollar consequences.</strong></p>
+<p>Since Samsung (and most companies) do not release official and accurate financial forecasts, data on the damage caused by battery malfunctions, etc., as an open dataset, the actual data is not available.</p>
+<p>Therefore, I am using a simulated and simplified dataset for Samsung’s forecast, which is solely for comparison between true forecasts and incorrect forecasts with the aim of graphically comparing accurate and inaccurate predictions.</p>
+<p>Real analysis should be derived from financial sources, stock reports, or economic news websites (such as Yahoo Finance, Investing.com, or Samsung IR). However, due to the unavailability of real data, I had to create a simulated dataset. Nevertheless, I tried to make the analysis more realistic by extracting some real data on stock or earnings per share <strong>(EPS)</strong>.</p>
+<p><span class="citation" data-cites="samsung_earnings">(<a href="#ref-samsung_earnings" role="doc-biblioref"><strong>samsung_earnings?</strong></a>)</span></p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="small-errors-big-consequences-final_files/figure-html/unnamed-chunk-6-1.svg" class="img-fluid figure-img" width="624"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="small-errors-big-consequences-final_files/figure-html/unnamed-chunk-7-1.svg" class="img-fluid figure-img" width="624"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Case Study: Forecasting Error in Financial Reports</strong></p>
+<p>A company (we’ll simulate Samsung) published quarterly revenue forecasts. Due to a data entry error, some forecasts were overstated, misleading stakeholders and resulting in strategic misalignment.</p>
+<p><span class="citation" data-cites="yahoo_samsung_analysis">(<a href="#ref-yahoo_samsung_analysis" role="doc-biblioref"><strong>yahoo_samsung_analysis?</strong></a>)</span></p>
+<p>Dataset (Simulated) :</p>
+<p>Plot — Comparison Between True vs Wrong Forecast :</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="small-errors-big-consequences-final_files/figure-html/unnamed-chunk-9-1.svg" class="img-fluid figure-img" width="624"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Plot — Difference Between Forecasts :</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="small-errors-big-consequences-final_files/figure-html/unnamed-chunk-10-1.svg" class="img-fluid figure-img" width="624"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Even small data entry errors in financial forecasts can result in severe consequences: stakeholder confusion, misplaced budgets, reputational damage, and market response volatility. Validating data before publication is not optional—it’s critical.</p>
+<p><span class="citation" data-cites="unknown_nodate_valuableinfo">(<a href="#ref-unknown_nodate_valuableinfo" role="doc-biblioref">Unknown, n.d.</a>)</span></p>
+<p><strong>This is a tangible example that I experienced years ago :</strong></p>
+<p>Some times ago I tried to write a program which is related to the detection and prediction of breast cancer cells.</p>
+<p>The program worked in a way that could recognized cancer cells from healthy cells (malignant cells and benign cells) based on color or black-and-white imaging (color spectrum) of the breast and was designed to locate the origin.</p>
+<p>The program was connecting to a robot, which would identify the coordinates of cancer cells using 3D imaging and then begin laser therapy.</p>
+<p><strong>Why use a robot?</strong></p>
+<p>To minimize human error. This method is typically effective for eliminating very small, early-stage tumors (Laser Ablation). The robot was supposed to irradiate the area around each malignant cell with a margin of error between 1 to 7 nanometers.</p>
+<p>However, the programming encountered some flaws and failed to accurately identify malignant cells based on color spectrum analysis. As a result, instead of targeting the cancerous cells, the laser mistakenly hit surrounding healthy cells, causing unintended burns. This was a small but clear example of <strong>“Small Errors, Big Consequences.”</strong></p>
+<p><br></p>
+<p>Some Codes that showing the plot in 2D and 3D :</p>
+<p><br></p>
+<p><strong>2D Visualization</strong> (PCA on Breast Cancer Dataset) :</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="small-errors-big-consequences-final_files/figure-html/unnamed-chunk-11-1.svg" class="img-fluid figure-img" width="624"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>3D Visualization (PCA on Breast Cancer Dataset) :</strong></p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="small-errors-big-consequences-final_files/figure-html/unnamed-chunk-12-1.svg" class="img-fluid figure-img" width="624"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>The green spot</strong> was the area where we grew the cancer cells. However, due to an error, this green area, which should have been exposed to the laser radiation, was not, and it caused damage to other tissues.</p>
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<figcaption>Fig1.Errors Lazering</figcaption>
+<p><img src="mouse002.jpg" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>As you can see in the image above, the red area in the fourth photo is the cancerous tissue, and the green area is the part that was mistakenly treated with laser therapy.</p>
+</section>
+</section>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
+<p>In an era where data drives every aspect of business operations and strategic decision-making, the integrity and management of data have become paramount. This paper has demonstrated that even minor errors in data—whether originating from manual entry, faulty algorithms, outdated sources, or insufficient validation—can result in severe, sometimes irreversible, consequences for organizations. Through detailed examples and real-world business cases, it has become clear that poor data quality and mismanagement are not just technical issues but strategic vulnerabilities that threaten financial stability, operational efficiency, regulatory compliance, and organizational reputation.</p>
+<p>The cost of bad data is not limited to direct financial losses. As seen in cases ranging from Samsung’s market value drop due to a data entry error, to the Equifax data breach, the ripple effects include loss of stakeholder trust, missed market opportunities, and long-term reputational harm. The medical technology example highlighted how data errors can even impact human lives, underlining the critical importance of robust data governance and validation at every stage—from collection and storage to analysis and action.</p>
+<p>The lessons are clear: businesses must treat data as a strategic asset. This means investing in comprehensive data governance frameworks, adopting best practices in validation and normalization, ensuring cross-departmental integration, and providing ongoing staff training. By proactively identifying and mitigating sources of data error, organizations can transform data from a potential liability into a foundation for innovation, competitive advantage, and sustainable success.</p>
+<p>Ultimately, the path forward is not simply about avoiding mistakes, but about building resilient systems and cultures that recognize the value of data—and the potentially massive consequences of even the smallest errors.</p>
+</section>
+<section id="references" class="level1">
+<h1>References</h1>
+<!-- References will auto-populate in the refs div below -->
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-kitchin2014data" class="csl-entry" role="listitem">
+Kitchin, R. (2014). <em>The data revolution: Big data, open data, data infrastructures and their consequences</em>. Sage Publications.
+</div>
+<div id="ref-provost2013data" class="csl-entry" role="listitem">
+Provost, F., &amp; Fawcett, T. (2013). <em>Data science for business: What you need to know about data mining and data-analytic thinking</em>. O’Reilly Media.
+</div>
+<div id="ref-unknown_nodate_valuableinfo" class="csl-entry" role="listitem">
+Unknown. (n.d.). <em>Discusses what makes information valuable or harmful in decision-making processes</em>.
+</div>
+</div>
+</section>
+<section id="affidavit" class="level1">
+<h1>Affidavit</h1>
+<p>I hereby affirm that this submitted paper was authored unaided and solely by me. Additionally, no other sources than those in the reference list were used. Parts of this paper, including tables and figures, that have been taken either verbatim or analogously from other works have in each case been properly cited with regard to their origin and authorship. This paper either in parts or in its entirety, be it in the same or similar form, has not been submitted to any other examination board and has not been published.</p>
+<p>I acknowledge that the university may use plagiarism detection software to check my thesis. I agree to cooperate with any investigation of suspected plagiarism and to provide any additional information or evidence requested by the university.</p>
+<p>Checklist:</p>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="">The handout contains 3-5 pages of text.</label></li>
+<li><label><input type="checkbox" checked="">The submission contains the Quarto file of the handout.</label></li>
+<li><label><input type="checkbox" checked="">The submission contains the Quarto file of the presentation.</label></li>
+<li><label><input type="checkbox" checked="">The submission contains the HTML file of the handout.</label></li>
+<li><label><input type="checkbox" checked="">The submission contains the HTML file of the presentation.</label></li>
+<li><label><input type="checkbox" checked="">The submission contains the PDF file of the handout.</label></li>
+<li><label><input type="checkbox" checked="">The submission contains the PDF file of the presentation.</label></li>
+<li><label><input type="checkbox" checked="">The title page of the presentation and the handout contain personal details (name, email, matriculation number).</label></li>
+<li><label><input type="checkbox" checked="">The handout contains a abstract.</label></li>
+<li><label><input type="checkbox" checked="">The presentation and the handout contain a bibliography, created using BibTeX with APA citation style.</label></li>
+<li><label><input type="checkbox" checked="">Either the handout or the presentation contains R code that proof the expertise in coding.</label></li>
+<li><label><input type="checkbox" checked="">The handout includes an introduction to guide the reader and a conclusion summarizing the work and discussing potential further investigations and readings, respectively.</label></li>
+<li><label><input type="checkbox" checked="">All significant resources used in the report and R code development.</label></li>
+<li><label><input type="checkbox" checked="">The filled out Affidavit.</label></li>
+<li><label><input type="checkbox" checked="">A concise description of the successful use of Git and GitHub, as detailed here: <a href="https://github.com/hubchev/make_a_pull_request" class="uri">https://github.com/hubchev/make_a_pull_request</a>.</label></li>
+<li><label><input type="checkbox" checked="">The link to the presentation and the handout published on GitHub.</label></li>
+</ul>
+<p>[Alireza Toutounchi,] [06/18/2025,] [Koln]</p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

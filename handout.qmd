@@ -1,0 +1,355 @@
+---
+title: "Small Errors, Big Consequences: Lessons from Data Mismanagement in Business"
+shorttitle: "Small Errors, Big Consequences"
+# Set names and affiliations.
+# It is nice to specify everyone's orcid, if possible.
+# There can be only one corresponding author, but declaring one is optional.
+author:
+  - name: Alireza Toutounchi (Matriculation:400889526)
+    corresponding: true
+    email: toutounchi.alireza@stud.hs-fresenius.de
+    url:
+    affiliations:
+        name: "Hochschule Fresenius - University of Applied Science"
+        group: "International Management, M.A."
+        department:
+        address:
+        city: Koln
+blank-lines-above-author-note: 2
+author-note:
+  status-changes:
+    # Example: [Author name] is now at [affiliation].
+    affiliation-change:
+    # Example: [Author name] is deceased.
+    deceased: ~
+  # Disclosures condensed to one paragraph, but you can start a field with two line breaks to break them up: \n\nNew Paragraph
+  disclosures:
+    # Example: This study was registered at X (Identifier Y).
+    study-registration: ~
+    # Acknowledge and cite data/materials to be shared.
+    data-sharing: ~
+    # Example: This article is based on data published in [Reference].
+    # Example: This article is based on the dissertation completed by [citation]. 
+    related-report: ~
+    # Example: [Author name] has been a paid consultant for Corporation X, which funded this study.
+    conflict-of-interest: The authors have no conflicts of interest to disclose.
+    # Example: This study was supported by Grant [Grant Number] from [Funding Source].
+    financial-support: ~
+    # Example: The authors are grateful to [Person] for [Reason].
+    gratitude: ~
+    # Example. Because the authors are equal contributors, order of authorship was determined by a fair coin toss.
+    authorship-agreements: ~
+abstract: "In the era of data-driven decision-making, even minor errors in data management can lead to major financial, operational, and reputational consequences for businesses. This paper explores real-world cases where inaccurate, incomplete, or poorly governed data resulted in substantial setbacks for global organizations. Through an analysis of incidents at companies such as Equifax, Unity Technologies, Samsung, and Knight Capital, we highlight how flawed data inputs, system failures, and human errors have led to multimillion-dollar losses, regulatory penalties, and public mistrust. The study also presents a simulation comparing true and faulty forecasts in business reporting to illustrate how data errors can distort insights and decisions. Finally, key lessons are drawn, emphasizing the critical importance of robust data governance, validation systems, and proactive error detection in maintaining business integrity and resilience."
+keywords: [Data, Errors, Consequences, Mismanagement, Analysis]
+# If true, tables and figures are mingled with the text instead of listed at the end of the document.
+impact-statement: ~
+floatsintext: true
+# Numbered lines (.pdf and .docx only)
+numbered-lines: false
+# File with references
+bibliography: bibliography.bib
+csl: apa.csl
+# Suppress title page
+suppress-title-page: false
+# Link citations to references
+link-citations: true
+# Masks references that appear in the masked-citations list
+mask: false
+masked-citations:
+# If true, adds today's date below author affiliations. If text, can be any value.
+# This is not standard APA format, but it is convenient.
+# Works with docx, html, and typst.
+draft-date: false
+# Language options. See https://quarto.org/docs/authoring/language.html
+lang: en-US
+language:
+  citation-last-author-separator: "and"
+  citation-masked-author: "Masked Citation"
+  citation-masked-date: "n.d."
+  citation-masked-title: "Masked Title"
+  email: "Email"
+  title-block-author-note: "Author Note"
+  title-block-correspondence-note: "Correspondence concerning this article should be addressed to"
+  title-block-role-introduction: "Author roles were classified using the Contributor Role Taxonomy (CRediT; [credit.niso.org]([https://credit.niso.org)]https://credit.niso.org)) as follows:"
+  title-impact-statement: "Impact Statement"
+  references-meta-analysis: "References marked with an asterisk indicate studies included in the meta-analysis."
+format:
+  apaquarto-html:
+    toc: true
+    theme: cosmo
+    echo: true
+    css: styles.css
+  apaquarto-typst:
+    keep-typ: true
+    list-of-figures: false
+    list-of-tables: false
+    toc: true
+    papersize: "us-letter"
+  apaquarto-pdf:
+    # Can be jou (journal), man (manuscript), stu (student), or doc (document)
+    toc: true
+    documentmode: man
+    keep-tex: true
+echo: true
+---
+
+The term "data" refers to raw facts, figures, or information collected for reference, analysis, or processing. Data can exist in many forms — numbers, text, images, audio, video, or symbols — and it has no meaning on its own until it is interpreted.
+
+**Types of Data:**
+
+1.  Quantitative Data (Numerical)
+
+● Discrete: Countable (e.g., number of students).
+
+● Continuous: Measurable (e.g., height, weight).
+
+2.  Qualitative Data (Categorical)
+
+●Nominal: Categories with no order (e.g., gender, color).
+
+●Ordinal: Categories with order (e.g., satisfaction level: low, medium, high).
+
+**Forms of Data:** • Structured (organized in tables like Excel or databases) • Unstructured (like emails, social media, videos) • Semi-structured (like JSON or XML files)
+
+[@provost2013data]
+
+
+## Good Information
+
+Good information is accurate, timely, relevant, complete, and reliable. It enhances decision-making and contributes to achieving goals.
+
+1.  Accuracy – Free from error.
+2.  Timeliness – Up to date and delivered on time.
+3.  Relevance – Applicable to the problem or decision at hand.
+4.  Completeness – Covers all important facts.
+5.  Reliability – Trustworthy and consistent.
+
+Example: A dashboard showing real-time sales performance across regions using verified data sources.
+
+## Bad Information
+
+Bad information is inaccurate, outdated, irrelevant, incomplete, or misleading. It leads to poor decisions and potentially serious consequences. 1. Misinformation – False or misleading information shared without harmful intent. 2. Disinformation – Deliberately deceptive information shared with malicious intent. 3. Outdated data – Information that was once correct but no longer reflects the current state.
+
+Example: Using last year’s market trends to make decisions in a rapidly changing economy without checking current data.
+
+**The topic of discussion here is bad information, so I will address this issue and examine its implications and delve into it a little deeper.**
+
+Bad data can cost you money. It can also damage your reputation, drive good customers away, and negatively affect your entire workforce. Bad data, more often than not, results in bad decisions – and bad decisions can destroy a business. The true costs of bad data are so overwhelming that they are scary. If you do not take data quality seriously, you are at risk of being blindsided by the enormous impact of bad data.
+
+**What is Bad Data?**
+
+Bad data is any data that is not wholly accurate or doesn’t conform to necessary standards. That can include inaccurate data, incomplete data, conflicting data, duplicate data, invalid data, and unsynchronized data.
+
+[@firsteigen_cost_bad_data]
+
+**Example of bad data**
+
+
+**How bad data can impact your businesses ?**
+
+This is the most important question you should be concerned with to reach the correct answer in terms of proper management and preventing significant damage from the smallest errors. To answer this question, I would say that if the initial errors are recoverable with a small error margin and the project is flexible, it may be possible to prevent the issue with minimal cost and in the shortest possible time. However, if we analyze it on paper, if a project that is already in progress has not been properly analyzed beforehand and its roadmap hasn't been prepared, even if the error is addressed quickly, the project will still face significant consequences.
+
+[@firsteigen_cost_bad_data]
+
+
+**How does your business use data?**
+
+It outlines two primary functions of business data use—Making decisions and Managing operations—and illustrates the negative consequences of poor data practices under each.
+
+**1. Making Decisions**
+
+Businesses rely heavily on data to guide strategic, operational, and financial decisions. When data is incomplete, outdated, or incorrect, it leads to:
+
+**• Poor decisions:** Executives may act on flawed insights, leading to failed investments or ineffective campaigns.
+
+**• Missed opportunities:** Without timely or accurate data, organizations may overlook market trends or emerging customer needs.
+
+**• Internal loss of trust:** Employees lose confidence in systems or leadership when data repeatedly proves unreliable.
+
+Example:
+
+A retail company might misinterpret sales data due to duplicate entries, leading to overproduction of a poorly performing product.
+
+**2. Managing Operations**
+
+Data also plays a key role in the day-to-day functioning of a business—like inventory control, customer support, and supply chain management.
+
+When data is mismanaged, it results in:
+
+**• Wasted time & money:** Teams spend hours cleaning, verifying, or reconciling data.
+
+**• Frustrated customers:** Inaccurate customer profiles or slow systems erode user experience.
+
+**• External loss of trust:** Repeated failures caused by bad data can harm a brand’s reputation in the market.
+
+Example:
+
+An e-commerce platform using outdated shipping data may send packages to the wrong addresses, frustrating customers and increasing return costs.
+
+**Conclusion:**
+
+Businesses depend on data to inform both decision-making and daily operations. when this data is unreliable, the consequences ripple through every layer of the organization—from strategic planning to customer satisfaction. Mismanagement not only wastes resources but undermines trust both internally and externally. Companies must treat data as a critical asset, investing in quality controls, validation systems, and data governance to mitigate these risks.
+
+**What is Data Normalizing ?**
+
+Data normalization is the process of scaling numerical values so that they fall within a common range—often between 0 and 1 or so they have a mean of 0 and a standard deviation of 1.
+
+
+
+[@smith2025impactdata]
+
+**When use ?**
+
+When we want to perform the process of scaling numerical values for numerical data (numeric variables), we can use data normalization. However, for some data that are not numerical, such as categorical data (gender and country), we simply need to encode the data, and binary data (0, 1) are usually already normalized. Textual and historical data must first be converted into numerical features.
+
+The following algorithms are commonly used for normalization:
+
+• K-means clustering
+
+• PCA
+
+• Logistic / Linear Regression
+
+• SVM
+
+• Neural Networks
+
+• Decision Tree / Random Forest
+
+[@provost2013researchgate]
+
+
+
+<br>
+
+## What is Data Mismanagement in Business?
+
+Data mismanagement in business refers to the poor handling, organization, protection, or use of data, leading to negative outcomes for operations, strategy, customers, and compliance.
+
+It includes everything from:
+
+1.  storing outdated or duplicate records,
+2.  using inaccurate data for decision-making,
+3.  failing to secure sensitive information,
+4.  to lacking proper data governance policies.
+
+
+## **Common Consequences:**
+
+1.  Financial Losses: Wrong data can lead to flawed decisions and costly errors.
+
+2.  Reputation Damage: Loss of customer trust due to data breaches or service failures.
+
+3.  Regulatory Fines: Non-compliance with laws like GDPR or HIPAA due to poor data practices.
+
+4.  Operational Inefficiencies: Wasted resources due to rework, duplication, or delays.
+
+**Data mismanagement happens when a business fails to treat data as a strategic asset—resulting in bad decisions, inefficiency, and a loss of trust.**
+
+
+All the consequences of small and large problems in the business field stem from the lack of access to raw and initial data, classified information, data from an incorrect statistical population, and even information from the wrong choice of company or project in the early stages.
+
+To prevent such occurrences, we must first obtain accurate and classified data from the correct statistical population. After that, it's time to categorize and prioritize the information and classify it. Finally, accurate and precise data analysis comes into play.
+
+The final step is predicting the data and observing the initial results of the forecast. This allows you to start making predictions based on accurate and precise data and forecast the most accurate outcome, taking into account human error and the difficulty of project execution.
+
+This is an example of combining proper management with the use of data analysis, providing the best output as an initial sample to the client.
+
+**Key Lessons from Data Mismanagement in Business**
+
+**1. Financial Losses Due to Data Errors**
+
+Inaccurate data can lead to significant financial setbacks. For instance, Unity Technologies experienced a \$110 million loss due to incorrect data used in their Audience Pinpoint tool, which affected ad targeting effectiveness.
+
+**2. Reputational Damage and Loss of Trust**
+
+Data breaches or mismanagement can erode customer trust. Equifax's 2017 data breach exposed sensitive information of 147 million people, leading to a damaged reputation and legal consequences.
+
+**3. Operational Inefficiencies**
+
+Poor data quality can disrupt business operations. Uber faced a \$45 million loss due to miscalculations in driver payments, stemming from data inaccuracies.
+
+**4. Regulatory Non-Compliance**
+
+Failure to manage data properly can result in non-compliance with regulations. The Capital Hill Cashgate Scandal in Malawi involved the mismanagement of government funds due to inadequate financial data systems, leading to significant political and financial repercussions.
+
+**5. Strategic Missteps**
+
+Decisions based on flawed data can misguide business strategies. Samsung reportedly lost **\$105 billion** due to a data entry error that misrepresented financial forecasts, affecting investor confidence.
+
+[@kitchin2014data]
+
+** This is a real-life example from Samsung based on data mismanagement in business:**
+
+**1. Samsung (2016) - Battery overheating on Galaxy Note 7 smartphones**
+
+Samsung faced a significant issue in 2016 with its Galaxy Note 7 smartphones, which were prone to battery overheating and catching fire. This crisis was largely due to poor data management and quality control in the production process. Initially, the company did not properly analyze the data related to battery safety, which led to design flaws in the device. After launching the product, Samsung failed to act quickly enough, relying on faulty data and assumptions about the safety of the phones, causing them to recall millions of units.
+
+This situation highlights how data mismanagement—whether it's in the form of faulty testing, incorrect data interpretation, or slow reaction to early warning signs—can lead to major financial losses, reputation damage, and significant customer trust issues. Proper data analysis, accurate forecasting, and quick decision-making could have helped Samsung avoid such a crisis or at least mitigate its effects.
+
+[@tradingeconomics_samsung_eps]
+
+
+
+**This is a tangible example that I experienced years ago :**
+
+Some times ago I tried to write a program which is related to the detection and prediction of breast cancer cells.
+
+The program worked in a way that could recognized cancer cells from healthy cells (malignant cells and benign cells) based on color or black-and-white imaging (color spectrum) of the breast and was designed to locate the origin.
+
+The program was connecting to a robot, which would identify the coordinates of cancer cells using 3D imaging and then begin laser therapy.
+
+**Why use a robot?**
+
+To minimize human error. This method is typically effective for eliminating very small, early-stage tumors (Laser Ablation). The robot was supposed to irradiate the area around each malignant cell with a margin of error between 1 to 7 nanometers.
+
+However, the programming encountered some flaws and failed to accurately identify malignant cells based on color spectrum analysis. As a result, instead of targeting the cancerous cells, the laser mistakenly hit surrounding healthy cells, causing unintended burns. This was a small but clear example of **"Small Errors, Big Consequences."**
+  
+  
+
+
+# Conclusion
+
+In an era where data drives every aspect of business operations and strategic decision-making, the integrity and management of data have become paramount. This paper has demonstrated that even minor errors in data—whether originating from manual entry, faulty algorithms, outdated sources, or insufficient validation—can result in severe, sometimes irreversible, consequences for organizations. Through detailed examples and real-world business cases, it has become clear that poor data quality and mismanagement are not just technical issues but strategic vulnerabilities that threaten financial stability, operational efficiency, regulatory compliance, and organizational reputation.
+
+The cost of bad data is not limited to direct financial losses. As seen in cases ranging from Samsung’s market value drop due to a data entry error, to the Equifax data breach, the ripple effects include loss of stakeholder trust, missed market opportunities, and long-term reputational harm. The medical technology example highlighted how data errors can even impact human lives, underlining the critical importance of robust data governance and validation at every stage—from collection and storage to analysis and action.
+
+The lessons are clear: businesses must treat data as a strategic asset. This means investing in comprehensive data governance frameworks, adopting best practices in validation and normalization, ensuring cross-departmental integration, and providing ongoing staff training. By proactively identifying and mitigating sources of data error, organizations can transform data from a potential liability into a foundation for innovation, competitive advantage, and sustainable success.
+
+Ultimately, the path forward is not simply about avoiding mistakes, but about building resilient systems and cultures that recognize the value of data—and the potentially massive consequences of even the smallest errors.
+
+
+# References
+
+<!-- References will auto-populate in the refs div below -->
+
+::: {#refs}
+:::
+
+
+# Affidavit
+
+I hereby affirm that this submitted paper was authored unaided and solely by me. Additionally, no other sources than those in the reference list were used. Parts of this paper, including tables and figures, that have been taken either verbatim or analogously from other works have in each case been properly cited with regard to their origin and authorship. This paper either in parts or in its entirety, be it in the same or similar form, has not been submitted to any other examination board and has not been published.
+
+I acknowledge that the university may use plagiarism detection software to check my thesis. I agree to cooperate with any investigation of suspected plagiarism and to provide any additional information or evidence requested by the university.
+
+Checklist:
+
+-   [x] The handout contains 3-5 pages of text.
+-   [x] The submission contains the Quarto file of the handout.
+-   [x] The submission contains the Quarto file of the presentation.
+-   [x] The submission contains the HTML file of the handout.
+-   [x] The submission contains the HTML file of the presentation.
+-   [x] The submission contains the PDF file of the handout.
+-   [x] The submission contains the PDF file of the presentation.
+-   [x] The title page of the presentation and the handout contain personal details (name, email, matriculation number).
+-   [x] The handout contains a abstract.
+-   [x] The presentation and the handout contain a bibliography, created using BibTeX with APA citation style.
+-   [x] Either the handout or the presentation contains R code that proof the expertise in coding.
+-   [x] The handout includes an introduction to guide the reader and a conclusion summarizing the work and discussing potential further investigations and readings, respectively.
+-   [x] All significant resources used in the report and R code development.
+-   [x] The filled out Affidavit.
+-   [x] A concise description of the successful use of Git and GitHub, as detailed here: <https://github.com/hubchev/make_a_pull_request>.
+-   [x] The link to the presentation and the handout published on GitHub.
+
+\[Alireza Toutounchi,\] \[06/18/2025,\] \[Koln\]
